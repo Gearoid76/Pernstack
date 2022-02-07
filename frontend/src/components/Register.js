@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import { Link } from "react-router-dom";
 import  { toast } from "react-toastify";
 
 const Register = ({setAuth}) => {
@@ -50,6 +51,7 @@ const Register = ({setAuth}) => {
         <Fragment>
             <h1 className="text-center mt-5">Register</h1>
             <form onSubmit={onSubmitForm}>
+              <div className="flex-container-register"> 
                 <input
                     type="text" 
                     name="email" 
@@ -77,6 +79,8 @@ const Register = ({setAuth}) => {
               
 
                 <button className ="btn btn-success btn-block">Submit</button>
+                <Link to="/login">Login</Link>
+              </div>
             </form>
         </Fragment>
     );

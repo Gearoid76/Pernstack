@@ -9,9 +9,9 @@ const Login = ({ setAuth }) => {
     const [inputs, setInputs] = useState ({
         email: "",
         password: ""    
-    })
+    });
 
-    const { email, password } = inputs
+    const { email, password } = inputs;
 
     const onChange = e => {
         setInputs({ ...inputs, [e.target.name]: e.target.value })
@@ -22,7 +22,7 @@ const Login = ({ setAuth }) => {
         e.preventDefault()
         try {
 
-            const body = {email, password}
+            const body = { email, password };
 
            const response = await fetch("http://localhost:4000/auth/login", {
                method: "POST",

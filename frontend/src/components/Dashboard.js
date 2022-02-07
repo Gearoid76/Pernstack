@@ -36,7 +36,7 @@ const Dashboard = ({ setAuth }) => {
     return (
         <Fragment>
             <Header />
-            <h1>Dashboard!! {name}</h1>
+            <h4>Dashboard, Hello {name}</h4>
             <button className="btn btn-primary" onClick={e => logout(e)}>Logout</button>
         </Fragment>
     );

@@ -21,7 +21,7 @@ router.post("/register", validInfo, async (req,res) => {
         if (user.rows.length !== 0) {
             return res.status(401).json("User already exists");
         }
-        
+
         //3. Bcrypt the user password
 
         const saltRound = 10;
@@ -78,7 +78,7 @@ router.post("/login", validInfo, async (req,res) => {
 
         const token = jwtGenerator(user.rows[0].user_id);
         
-        res.json({ token });    
+        res.json({ token });
     } catch (err) {
         console.error(err.message);
         res.status(500).send("Server Error");
