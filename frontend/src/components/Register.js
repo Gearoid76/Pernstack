@@ -7,10 +7,11 @@ const Register = ({setAuth}) => {
   const [inputs, setInputs] = useState({
     email: "",
     password: "",
+    confirmPassword: "",
     name: ""
   });
 
-  const { email, password, name } = inputs;
+  const { email, password, confirmPassword, name } = inputs;
 
   const onChange = e =>
     setInputs({ ...inputs, [e.target.name]: e.target.value });
@@ -18,7 +19,7 @@ const Register = ({setAuth}) => {
   const onSubmitForm = async e => {
     e.preventDefault();
     try {
-      const body = { email, password, name };
+      const body = { email, password, confirmPassword, name };
       const response = await fetch("http://localhost:4000/auth/register",{
           method: "POST",
           headers: {
@@ -68,6 +69,14 @@ const Register = ({setAuth}) => {
                     value={password}
                     onChange={e => onChange(e)}
                 />
+                 <input 
+                    type="password" 
+                    name="confirmPassword" 
+                    placeholder="confirm password" 
+                    className="form-control my-3"
+                    value={confirmPassword}
+                    onChange={e => onChange(e)}
+                />
                 <input 
                     type="text" 
                     name="name" 
@@ -77,7 +86,6 @@ const Register = ({setAuth}) => {
                     onChange={e => onChange(e)}    
                 />
               
-
                 <button className ="btn btn-success btn-block">Submit</button>
                 <Link to="/login">Login</Link>
               </div>

@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt");
 const jwtGenerator = require("../utils/jwtGenerator");
 const validInfo = require("../middleware/validInfo");
 const authorization = require("../middleware/authorization");
+const res = require("express/lib/response");
 
 //Registering
 
@@ -11,7 +12,7 @@ router.post("/register", validInfo, async (req,res) => {
     try {
         // 1. destructure of the req.body(name, password, email)
 
-        const { name, password, email } = req.body;
+        const { name, password, confirmPassword, email } = req.body;
 
         //2. Check if error exists ( if user exists then throw an error)
 
@@ -21,6 +22,12 @@ router.post("/register", validInfo, async (req,res) => {
         if (user.rows.length !== 0) {
             return res.status(401).json("User already exists");
         }
+        if (password !== confirmPassword) {
+            return res.status(401).json("passwords don't match");
+        }
+        if (password.length <= 6) { 
+            return res.status(401).json("password must be longer than six characters");
+        } 
 
         //3. Bcrypt the user password
 
