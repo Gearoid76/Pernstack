@@ -63,8 +63,9 @@ const Login = ({ setAuth }) => {
                         onChange={e => onChange(e)}
                     />
                     <input 
-                        type="password" 
+                        type="text" 
                         name="password"
+                        id="pass"
                         placeholder="password" 
                         className ="form-control my-3"
                         value={password}
