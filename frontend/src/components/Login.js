@@ -57,7 +57,7 @@ const Login = ({ setAuth }) => {
                     <input 
                         type="email" 
                         name="email"
-                        placeholder="email" 
+                        placeholder="email test@gmail.com" 
                         className ="form-control my-3"
                         value={email}
                         onChange={e => onChange(e)}
@@ -66,7 +66,7 @@ const Login = ({ setAuth }) => {
                         type="text" 
                         name="password"
                         id="pass"
-                        placeholder="password" 
+                        placeholder="password - tester1" 
                         className ="form-control my-3"
                         value={password}
                         onChange={e => onChange(e)}
