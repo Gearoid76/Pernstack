@@ -1,0 +1,39 @@
+.searchInputs {
+    margin-top: 105px;
+    display: flex;
+}
+
+.seach input {
+    background-color: rgb(252, 252, 252);
+    border: 5px;
+    border-radius: 2px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    font-size: 18px;
+    padding: 15px;
+    height: 30px;
+    width: 300px;
+}
+
+.searchIcon {
+    height: 60px;
+    width: 50;
+    background-color: rgb(249, 9, 9);
+    display: grid;
+    place-items: center;
+}
+
+.searchIcon {
+    height: 60px;
+    width: 50px;
+    background-color: rgb(254, 254, 254);
+    display: grid;
+    place-items: center;
+}
+ input:focus {
+     outline: none;
+ }
+
+ .searchIcon svg {
+     font-size: 35px;
+ }

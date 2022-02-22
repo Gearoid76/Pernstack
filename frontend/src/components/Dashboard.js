@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { toast } from "react-toastify";
-import Header from "./Header";
+import SearchBar from "./SearchBar";
+import BookData from './Data.json';
 
 const Dashboard = ({ setAuth }) => {
 
@@ -33,12 +34,14 @@ const Dashboard = ({ setAuth }) => {
         getName()
     },[]);
 
+    
     return (
         <Fragment>
-            <Header />
             <h4>Dashboard, Hello {name}</h4>
+            <SearchBar placeholder='Enter a book name. ' data ={BookData} />
             <button className="btn btn-primary" onClick={e => logout(e)}>Logout</button>
         </Fragment>
+
     );
 };
 

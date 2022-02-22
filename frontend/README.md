@@ -15,3 +15,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 for the server nodemon or nodemon index will boot the server into 4000
 the frontend is npm start  this connects to postgre automatically (on localhost)
+
+the search bar https://www.youtube.com/watch?v=x7niho285qs&ab_channel=PedroTech 
+
