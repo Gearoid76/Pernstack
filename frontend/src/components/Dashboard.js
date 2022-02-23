@@ -38,8 +38,8 @@ const Dashboard = ({ setAuth }) => {
     return (
         <Fragment>
             <h4>Dashboard, Hello {name}</h4>
-            <SearchBar placeholder='Enter a book name. ' data ={BookData} />
             <button className="btn btn-primary" onClick={e => logout(e)}>Logout</button>
+            <SearchBar placeholder='Enter a book name. ' data ={BookData} />
         </Fragment>
 
     );
