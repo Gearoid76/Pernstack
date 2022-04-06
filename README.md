@@ -12,3 +12,5 @@ with a table of login_page and db of nodelogin
 This runs on developement mode at the moment. 
 This was a project that I was learning from https://www.youtube.com/watch?v=7UQBMb8ZpuE where i was learning about JWT and registeration this is 1 of 2  
 thanks Henry 
+to get this running: server is nodemon and the frontend is npm start
+This is on its own it requires a backend ( postgres server) to connect to. So you cant login you will get an error. ECONNREFUSED 127.0.0.1.xXXXX
